@@ -23,7 +23,7 @@ You can:
 - Propose enhancements to evaluation logic
 
 👉 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for repo guidelines  
-👉 See [`submissions.md`](..\submissions\submissions.md) for MCQ format and templates
+👉 See [`submissions.md`](submissions/submissions.md) for MCQ format and templates
 
 ---
 
