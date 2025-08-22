@@ -1,91 +1,86 @@
-# ✍️ Contributing to the Law Enforcement MMLU Dataset
+# 🤝 Contributing to Law Enforcement MMLU
 
-Thank you for your interest in contributing!  
-Our mission is to create a high-quality benchmark that reflects the complexity and standards of global law enforcement.
+Thank you for your interest in contributing to the **Law Enforcement Massive Multitask Language Understanding** project!  
+We welcome contributions from law enforcement professionals, researchers, legal experts, educators, and developers.
 
----
-
-## ♻️ Contribution Workflow
-
-1. Fork this repository  
-2. Create a new branch: `feature/your-topic`  
-3. Add questions to `dataset/questions.jsonl`  
-4. Ensure format follows the schema below  
-5. Submit a Pull Request with the label `new-question`
-
-Refer to `samples/sample_question.jsonl` as your starting template  
+This file provides an overview of how to contribute — whether you're submitting questions, improving documentation, or helping with code.
 
 ---
 
-## 📚 Question Format
+## 📋 How to Contribute
 
-```json
-{
-  "id": "LE002",
-  "question": "Who may file a First Information Report under Section 107 CPC Malaysia?",
-  "options": ["Only Police Officers", "Any Person", "Only the Victim", "A Judge"],
-  "answer": "Any Person",
-  "category": "Criminal Procedure",
-  "difficulty": "Intermediate",
-  "reference": "Section 107, CPC Malaysia",
-  "explanation": "The law permits any person with knowledge of a cognizable offence to initiate an FIR."
-}
+### 📌 For Question Contributors (MCQs)
+We accept multiple-choice questions in both `.jsonl` and `.xlsx` formats.
+
+➡️ Please refer to the full [Submission Guide](submissions.md) for:
+- Example format
+- Required metadata
+- Validation instructions
+
+---
+
+### 💻 For Code & Repo Contributors
+
+#### 1. Fork the Repository
+Click on "Fork" at the top-right corner to create a copy under your GitHub account.
+
+#### 2. Clone Your Fork
+```bash
+git clone https://github.com/YOUR_USERNAME/MMLU-Law-Enforcement.git
+cd MMLU-Law-Enforcement
 ```
 
----
+#### 3. Create a New Branch
+```bash
+git checkout -b feature/your-feature-name
+```
 
-## ✏️ Guidelines
+#### 4. Make Changes and Commit
+Use clear commit messages, such as:
+```bash
+git commit -m "Add validation for category field in submission script"
+```
 
-To maintain the quality and consistency of the Law Enforcement MMLU Dataset, please follow these guidelines:
+#### 5. Push to Your Fork
+```bash
+git push origin feature/your-feature-name
+```
 
-### ✅ Question Writing
-
-- Use clear, concise, and **neutral language** (avoid bias or ambiguity)
-- Questions must have **one correct answer** only
-- Avoid overly technical jargon unless it is necessary and widely understood in the domain
-
-### 🧠 Answer Choices (Options)
-
-- Include **four options** per question
-- Distractors (incorrect answers) must be **plausible**, not obviously incorrect
-- Ensure no two options are **too similar** or **overlapping in meaning**
-
-### 🏛 Legal and Domain References
-
-- Cite **publicly available** or officially published legal references (e.g. Penal Code, CPC, Evidence Act, SOPs)
-- When referencing internal manuals or enforcement guidelines, ensure they are **non-confidential and accessible**
-
-### 🏷 Metadata Labelling
-
-- **Category**: Choose the appropriate domain (e.g., Cybercrime, Criminal Procedure, AML/CFT)
-- **Difficulty**: Label as `Basic`, `Intermediate`, or `Advanced`
-- **Reference**: Specify the act, section, or source (e.g., "Section 117 CPC")
-- **Explanation**: Provide a short, factual justification for the correct answer
-
-### ❌ Common Mistakes to Avoid
-
-- Using outdated or repealed laws  
-- Writing questions that are too opinion-based  
-- Reusing the same correct answer too often  
-- Including explanations that simply restate the question  
+#### 6. Submit a Pull Request
+Go to the original repo and open a PR from your branch. Include a brief description.
 
 ---
 
-## ✅ Validation Checklist
+## ✅ Validation Tools
 
-Use this checklist before submitting your question:
+Before submitting your `.jsonl` file, run the validation script:
 
-- [ ] Question is original and clearly written  
-- [ ] Includes exactly four answer choices  
-- [ ] Correct answer is clearly marked  
-- [ ] Explanation is informative and accurate  
-- [ ] Metadata (category, difficulty, reference) is complete  
-- [ ] JSON syntax is valid and properly formatted  
+```bash
+python scripts/validate_submission.py path/to/your_file.jsonl
+```
+
+This will check:
+- JSON validity
+- 4-option structure
+- Required metadata
+- Proper difficulty labels
 
 ---
 
-## 📅 Community
+## 💬 Communication
 
-- Submit questions or issues via [GitHub Issues](../../issues)  
-- Join our Contributor Slack or attend MMLU Data Jams  
-- Top contributors may be invited to the review board
+- For issues or bugs: open a GitHub Issue
+- For general questions: email us at [ai.team@elmu.edu.my](mailto:ai.team@elmu.edu.my)
+- We also encourage discussions via PR comments or GitHub Discussions (if enabled)
+
+---
+
+## ⚖️ Licensing & Attribution
+
+By contributing, you agree to license your content under the MIT License, and allow your submissions to be included in official or community datasets with attribution to your GitHub username unless stated otherwise.
+
+---
+
+## 🙌 Acknowledgements
+
+Your contribution supports the development of trustworthy, domain-specific AI for public safety and governance. Thank you!
