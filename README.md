@@ -1,99 +1,87 @@
-# 🔒 MMLU Law Enforcement Dataset
+# 🔒 Law Enforcement MMLU Dataset
 
-Welcome to the official repository of the **Massive Multitask Language Understanding (MMLU) Law Enforcement** dataset. This open-source initiative aims to benchmark large language models (LLMs) and human performance across a wide array of enforcement domains including criminal law, investigative procedures, digital forensics, and ethical enforcement conduct.
-
----
-
-## 🌎 Purpose
-
-To provide a high-quality, peer-reviewed benchmark to evaluate reasoning, recall, and decision-making abilities of both AI systems and professionals within the law enforcement ecosystem. This dataset will also be used to compare the performance of different LLMs — including our proprietary system, ELMU Insights.Akta.
+Welcome to the official repository of the **Law Enforcement Massive Multitask Language Understanding** dataset.  
+This open-source initiative is designed to benchmark language models and human reasoning in domains related to law enforcement, governance, criminal justice, and compliance.
 
 ---
 
-## 📚 Dataset Overview
+## 🌍 Project Purpose
 
-- **Format**: JSON Lines (.jsonl)  
-- **Type**: Multiple Choice Questions (MCQs)  
-- **Domains Covered**:
-  - Criminal Procedure Code (CPC)
-  - Penal Code
-  - Evidence Act
-  - Police SOPs
-  - AML/CFT
-  - Cybercrime Laws
-  - Forensics & Investigation  
-- **Metadata Tags**:
-  - `category`
-  - `difficulty`
-  - `reference`
-  - `explanation`
+- 📊 **Benchmarking** large language models (LLMs) like GPT-5, Claude, and ELMU Insights.Akta
+- 🧠 **Crowdsourcing** multiple-choice questions from law enforcement professionals and subject matter experts
+- 🧪 **Evaluating** model reasoning across legal acts, police SOPs, forensic procedures, cybercrime laws, and more
 
 ---
 
-## 🔢 Sample Entry
+## ✍️ How to Contribute
+
+We welcome contributors of all backgrounds — enforcement officers, legal scholars, data scientists, and researchers.
+
+You can:
+- Submit your own MCQ questions (`.jsonl` or `.xlsx`)
+- Run evaluations using our scripts
+- Propose enhancements to evaluation logic
+
+👉 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for repo guidelines  
+👉 See [`submissions.md`](submissions.md) for MCQ format and templates
+
+---
+
+## 📄 Sample Question Format (JSONL)
 
 ```json
 {
   "id": "LE001",
-  "question": "Under Malaysian CPC, what is the maximum remand period a Magistrate can grant for a serious offence?",
+  "question": "What is the maximum remand period under Section 117 of the CPC?",
   "options": ["7 days", "14 days", "15 days", "21 days"],
-  "answer": "15 days",
+  "answer": "C) 15 days",
   "category": "Criminal Procedure",
   "difficulty": "Advanced",
-  "reference": "Section 117 CPC",
-  "explanation": "For serious offences, the remand can be extended up to 15 days."
+  "reference": "Section 117 Criminal Procedure Code (CPC)",
+  "explanation": "The law permits up to 15 days for serious offences."
 }
 ```
----
 
-## 🚀 Getting Started
-
-1. Fork this repository  
-2. Read the [CONTRIBUTING.md](CONTRIBUTING.md) for formatting rules and submission guidelines  
-3. Use the provided `sample_question.jsonl` to begin drafting your contributions  
-4. Submit a pull request for review  
+Or see: [`samples/sample_question.jsonl`](samples/sample_question.jsonl)
 
 ---
 
-## 👥 Community
+## 📈 Zero-Shot Evaluation Results
 
-Join our discussion board via GitHub or our contributor Slack (invite in [`CONTRIBUTING.md`](CONTRIBUTING.md)).  
-We also run periodic **MMLU Data Jams** where contributors co-create and review questions live.
+See [`evaluations/zero_shot_results.md`](evaluations/zero_shot_results.md) for model comparisons on 100-question zero-shot benchmark.
+
+<details>
+<summary>📊 Click to expand evaluation scores</summary>
+
+| Model                          | Questions | Errors | Correct | Accuracy |
+|-------------------------------|-----------|--------|---------|----------|
+| ELMU Insights (English, May 7) | 29        | 10     | 19      | 65.5%    |
+| ELMU Insights (English, May 20)| 100       | 14     | 86      | 86.0%    |
+| ELMU Insights (BM, June 25)    | 100       | 3      | 97      | 97.0%    |
+| ELMU Insights (English, July 9)| 100       | 1      | 99      | 99.0%    |
+| ChatGPT (English, July 9)      | 100       | 3      | 97      | 97.0%    |
+| Claude (English, July 9)       | 100       | 3      | 97      | 97.0%    |
+| ChatGPT (BM, July 9)           | 100       | 2      | 98      | 98.0%    |
+| Claude (BM, July 9)            | 100       | 6      | 94      | 94.0%    |
+
+</details>
 
 ---
 
-## ✅ License
+## 📬 Contact & Feedback
+
+For questions or collaboration requests, reach out to us at  
+📧 [ai.team@elmu.edu.my](mailto:ai.team@elmu.edu.my)
+
+---
+
+## ⚖️ License
 
 This project is licensed under the **MIT License**.  
-Attribution required when reusing the dataset.
+Attribution required when reusing the dataset or tools.
 
 ---
 
-## ✨ Roadmap
+## 🚨 Powered by ELMU Insights.Akta
 
-- [x] Prepare repository structure
-- [x] Draft contribution guidelines
-- [ ] Launch contributor campaign
-- [ ] Reach 500 validated questions across 10 categories
-- [ ] Release v1.0 dataset
-- [ ] Integrate with ELMU Insights.Akta for evaluation
-- [ ] Publish benchmark report comparing LLMs
-
----
-
-## 🏆 Contributor Leaderboard
-
-| Rank | Contributor | Questions Submitted | Accepted Questions |
-|------|-------------|---------------------|--------------------|
-| 🥇 1 |             | 0                  | 0                 |
-| 🥈 2 |             | 0                  | 0                 |
-| 🥉 3 |             | 0                  | 0                 |
-
----
-
-## Feedback
-
-Suggestions and opinions (both positive and negative) are greatly welcome. 
-Please contact us by sending email to [elmu.ai@elmu.edu.my](mailto:elmu.ai@elmu.edu.my).
-
-
+A benchmark aligned with real-world law enforcement reasoning and Malaysia's legal ecosystem.
