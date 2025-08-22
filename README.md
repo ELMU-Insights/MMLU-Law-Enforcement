@@ -79,9 +79,3 @@ For questions or collaboration requests, reach out to us at
 
 This project is licensed under the **MIT License**.  
 Attribution required when reusing the dataset or tools.
-
----
-
-## 🚨 Powered by ELMU Insights.Akta
-
-A benchmark aligned with real-world law enforcement reasoning and Malaysia's legal ecosystem.
