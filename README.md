@@ -7,7 +7,7 @@ This open-source initiative is designed to benchmark language models and human r
 
 ## 🌍 Project Purpose
 
-- 📊 **Benchmarking** large language models (LLMs) like GPT-5, Claude, and ELMU Insights.Akta
+- 📊 **Benchmarking** large language models (LLMs)
 - 🧠 **Crowdsourcing** multiple-choice questions from law enforcement professionals and subject matter experts
 - 🧪 **Evaluating** model reasoning across legal acts, police SOPs, forensic procedures, cybercrime laws, and more
 
