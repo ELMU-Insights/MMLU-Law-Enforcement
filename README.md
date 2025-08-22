@@ -48,7 +48,7 @@ Or see: [`samples/sample_question.jsonl`](samples/sample_question.jsonl)
 
 ## 📈 Zero-Shot Evaluation Results
 
-See [`evaluations/zero_shot_results.md`](evaluations/zero_shot_results.md) for model comparisons on 100-question zero-shot benchmark.
+See [`evaluations/zero_shot_results.md`](evaluations/zero-shot_results.md) for model comparisons on 100-question zero-shot benchmark.
 
 <details>
 <summary>📊 Click to expand evaluation scores</summary>
